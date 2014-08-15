@@ -12,6 +12,8 @@
 		93CCF474199D51D500FA0EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CCF472199D51D500FA0EBA /* Main.storyboard */; };
 		93CCF476199D51D500FA0EBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CCF475199D51D500FA0EBA /* Images.xcassets */; };
 		93CCF482199D51D500FA0EBA /* TableScrollALDynTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCF481199D51D500FA0EBA /* TableScrollALDynTextTests.swift */; };
+		93CCF48E199D56D300FA0EBA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCF48D199D56D300FA0EBA /* CustomTableViewCell.swift */; };
+		93CCF490199D9A4000FA0EBA /* riker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93CCF48F199D9A4000FA0EBA /* riker.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		93CCF47B199D51D500FA0EBA /* TableScrollALDynTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableScrollALDynTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CCF480199D51D500FA0EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CCF481199D51D500FA0EBA /* TableScrollALDynTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableScrollALDynTextTests.swift; sourceTree = "<group>"; };
+		93CCF48D199D56D300FA0EBA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		93CCF48F199D9A4000FA0EBA /* riker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = riker.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			children = (
 				93CCF46E199D51D500FA0EBA /* AppDelegate.swift */,
 				93CCF470199D51D500FA0EBA /* ViewController.swift */,
+				93CCF48D199D56D300FA0EBA /* CustomTableViewCell.swift */,
 				93CCF472199D51D500FA0EBA /* Main.storyboard */,
 				93CCF475199D51D500FA0EBA /* Images.xcassets */,
 				93CCF46C199D51D500FA0EBA /* Supporting Files */,
@@ -87,6 +92,7 @@
 		93CCF46C199D51D500FA0EBA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93CCF48F199D9A4000FA0EBA /* riker.jpg */,
 				93CCF46D199D51D500FA0EBA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -190,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CCF474199D51D500FA0EBA /* Main.storyboard in Resources */,
+				93CCF490199D9A4000FA0EBA /* riker.jpg in Resources */,
 				93CCF476199D51D500FA0EBA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CCF48E199D56D300FA0EBA /* CustomTableViewCell.swift in Sources */,
 				93CCF471199D51D500FA0EBA /* ViewController.swift in Sources */,
 				93CCF46F199D51D500FA0EBA /* AppDelegate.swift in Sources */,
 			);

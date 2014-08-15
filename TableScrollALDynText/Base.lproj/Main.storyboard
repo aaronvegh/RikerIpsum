@@ -1,25 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableScrollALDynText" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0G-l4-hHG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lB-7C-eNX">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="91w-5n-7w1">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="8cB-FL-cQ4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HaA-Li-xD0">
+                                                <rect key="frame" x="0.0" y="351" width="600" height="249"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="249" id="VkO-Ay-wAc"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="44" id="KAD-tZ-6ns" customClass="CustomTableViewCell" customModule="TableScrollALDynText" customModuleProvider="target">
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KAD-tZ-6ns" id="bTv-JO-Ekm">
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="SV8-Pn-mDA">
+                                                                    <rect key="frame" x="8" y="12" width="584" height="20"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="SV8-Pn-mDA" firstAttribute="top" secondItem="bTv-JO-Ekm" secondAttribute="topMargin" constant="4" id="Uh8-cb-fgF"/>
+                                                                <constraint firstItem="SV8-Pn-mDA" firstAttribute="trailing" secondItem="bTv-JO-Ekm" secondAttribute="trailingMargin" id="iR0-HL-iF7"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="SV8-Pn-mDA" secondAttribute="bottom" constant="3" id="vz8-S8-OoL"/>
+                                                                <constraint firstItem="SV8-Pn-mDA" firstAttribute="leading" secondItem="bTv-JO-Ekm" secondAttribute="leadingMargin" id="xeS-4N-4Ut"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="textContentLabel" destination="SV8-Pn-mDA" id="SHQ-ug-VWc"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="htP-UP-06i"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hNB-iA-d9l"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="HaA-Li-xD0" firstAttribute="leading" secondItem="0lB-7C-eNX" secondAttribute="leading" id="6tF-Jz-jfa"/>
+                                            <constraint firstAttribute="trailing" secondItem="91w-5n-7w1" secondAttribute="trailing" id="9Tj-ef-Xfq"/>
+                                            <constraint firstItem="91w-5n-7w1" firstAttribute="leading" secondItem="0lB-7C-eNX" secondAttribute="leading" id="O5u-3X-hzh"/>
+                                            <constraint firstItem="91w-5n-7w1" firstAttribute="top" secondItem="0lB-7C-eNX" secondAttribute="top" id="Tp1-JJ-uqj"/>
+                                            <constraint firstAttribute="height" constant="600" id="W3i-ul-OkZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="HaA-Li-xD0" secondAttribute="trailing" id="aDF-xi-E3w"/>
+                                            <constraint firstItem="HaA-Li-xD0" firstAttribute="top" secondItem="91w-5n-7w1" secondAttribute="bottom" constant="1" id="rWa-Tq-u0b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0lB-7C-eNX" secondAttribute="bottom" id="RFE-tk-2e1"/>
+                                    <constraint firstAttribute="width" secondItem="0lB-7C-eNX" secondAttribute="width" id="RgY-05-oCk"/>
+                                    <constraint firstAttribute="trailing" secondItem="0lB-7C-eNX" secondAttribute="trailing" id="lNp-wg-FAb"/>
+                                    <constraint firstItem="0lB-7C-eNX" firstAttribute="leading" secondItem="f0G-l4-hHG" secondAttribute="leading" id="nFs-J1-jpY"/>
+                                    <constraint firstItem="0lB-7C-eNX" firstAttribute="top" secondItem="f0G-l4-hHG" secondAttribute="top" id="p78-Bb-Py7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f0G-l4-hHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Tx-8N-MZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="f0G-l4-hHG" secondAttribute="trailing" id="H5N-FC-hRO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f0G-l4-hHG" secondAttribute="bottom" id="oT1-Sf-Wgw"/>
+                            <constraint firstItem="f0G-l4-hHG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wTC-BN-4jB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerViewHeightConstraint" destination="W3i-ul-OkZ" id="A6d-iN-x8M"/>
+                        <outlet property="imageView" destination="91w-5n-7w1" id="gFi-0P-yRN"/>
+                        <outlet property="tableView" destination="HaA-Li-xD0" id="Qpl-TG-334"/>
+                        <outlet property="tableViewHeightConstraint" destination="VkO-Ay-wAc" id="Gim-Hh-2HO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="135"/>
         </scene>
     </scenes>
 </document>
